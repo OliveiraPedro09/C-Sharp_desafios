@@ -1,63 +1,21 @@
-﻿// * Screen Sound Alura
+﻿// * Desafio 1 
+// Chegou a hora de você seguir todos os passos realizados durante esta aula e criar um jogo com os conhecimentos adquiridos. Neste jogo, o programa gera um número aleatório entre 1 e 100 e o usuário deve adivinhar qual é esse número. O programa utiliza o if-else e switch case para verificar se o número digitado pelo usuário é maior ou menor do que o número gerado pelo programa.O programa também utiliza o conceito de laço de repetição do-while para permitir que o usuário faça várias tentativas até acertar o número. Quando o usuário acertar o número, o jogo acaba e o programa exibe uma mensagem indicando que o jogo acabou.
 
-string welcomeMsg = "Boas Vindas Ao Screen Sound!"; // ! Toda Variavel deve ser finalizada com ;
+using System;
 
-// * Console.WriteLine é um método que exibe uma mensagem no console
-// * Console.WriteLine(welcomeMsg);
+Random random = new Random();
 
-// * Criando uma Função
-void ShowMsg(){
-    Console.WriteLine(@"
-░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
-██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
-╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
-░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
-██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
-╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░"); 
-// ! @ Chamado de Verbatim Literal que basicamente mostra o texto como ele realmente é 
-    Console.WriteLine(welcomeMsg);
-}
+int luckyNumber = random.Next(1, 101);
 
-int notaMedia = 6;
+// * Print para saber se o programa está sendo Executado corretamente
+Console.WriteLine("Número sorteado: " + luckyNumber);
 
-if (notaMedia >= 5){
-    Console.WriteLine("Nota suficiente para aprovação");
-}
+Console.Write("\nAdivinhe o número sorteado entre 1 e 100: ");
+string userGuess = Console.ReadLine()!;
+int userNumber = int.Parse(userGuess);
 
-void MenuOptions(){
-    Console.WriteLine("\n1 - Cadastrar Banda");
-    Console.WriteLine("2 - Mostrar todas as Bandas");
-    Console.WriteLine("3 - Avaliar Banda");
-    Console.WriteLine("4 - Mostrar Média da Banda");
-    Console.WriteLine("5 ou Outra Tecla - Sair");
-
-    Console.Write("\nEscolha uma opção: ");
-    string option = Console.ReadLine()!; // ! Ler a opção do Usuário, e o ! mostra que não pode ser nulo
-    int optionInt = int.Parse(option); // * Parse Converte uma string em um inteiro
-
-    
-    switch(optionInt){
-        
-        case 1:
-            Console.WriteLine("Cadastrar Banda");
-            break;
-        case 2:
-            Console.WriteLine("Mostrar todas as Bandas");
-            break;
-        case 3:
-            Console.WriteLine("Avaliar Banda");
-            break;
-        case 4:
-            Console.WriteLine("Mostrar Média da Banda");
-            break;
-        case 5:
-            Console.WriteLine("Tchau Tchau :) ");
-            break;
-        default:
-            Console.WriteLine("Tchau Tchau :) ");
-            break;
-    }
-}
-
-ShowMsg(); // * Chamar a função
-MenuOptions();
+if (userNumber == luckyNumber){
+    Console.WriteLine("Parabéns !! Você acertou o número sorteado.");
+    } else {
+        Console.WriteLine("Que Pena :( Você Errou !! Tente novamente.");
+    };
