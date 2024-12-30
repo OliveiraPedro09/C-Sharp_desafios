@@ -4,18 +4,22 @@
 using System;
 
 Random random = new Random();
-
 int luckyNumber = random.Next(1, 101);
 
-// * Print para saber se o programa está sendo Executado corretamente
-Console.WriteLine("Número sorteado: " + luckyNumber);
+do{
+    // * Print para saber se o programa está sendo Executado corretamente
+    Console.WriteLine("Número sorteado: " + luckyNumber);
 
-Console.Write("\nAdivinhe o número sorteado entre 1 e 100: ");
-string userGuess = Console.ReadLine()!;
-int userNumber = int.Parse(userGuess);
+    Console.Write("\nAdivinhe o número sorteado entre 1 e 100: ");
+    string userGuess = Console.ReadLine()!;
+    int userNumber = int.Parse(userGuess);
 
-if (userNumber == luckyNumber){
-    Console.WriteLine("Parabéns !! Você acertou o número sorteado.");
+    if (userNumber == luckyNumber){
+        Console.WriteLine("Parabéns !! Você acertou o número sorteado.");
+        break;
+    } else if (userNumber > luckyNumber){
+        Console.WriteLine("O numero sorteado é menor que o número digitado.");
     } else {
-        Console.WriteLine("Que Pena :( Você Errou !! Tente novamente.");
+        Console.WriteLine("O número sorteado é maior que o número digitado.");
     };
+}while(true);
