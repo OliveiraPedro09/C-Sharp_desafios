@@ -1,0 +1,15 @@
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.AssemblyInfoInputs.cache
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.AssemblyInfo.cs
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.csproj.CoreCompileInputs.cache
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.sourcelink.json
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/bin/Debug/net9.0/desafio-5
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/bin/Debug/net9.0/desafio-5.deps.json
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/bin/Debug/net9.0/desafio-5.runtimeconfig.json
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/bin/Debug/net9.0/desafio-5.dll
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/bin/Debug/net9.0/desafio-5.pdb
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.dll
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/refint/desafio-5.dll
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.pdb
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/desafio-5.genruntimeconfig.cache
+/Users/pedromartinsdeoliveira/Documents/C-Sharp_desafios/desafio-5/obj/Debug/net9.0/ref/desafio-5.dll

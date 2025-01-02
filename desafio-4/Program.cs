@@ -11,15 +11,19 @@ account.AccountNumber = 123456;
 account.Owner = "John Doe";
 account.Balance = 1000.00;
 account.ShowAccount();
+Thread.Sleep(2000);
+Console.Clear();
 
 // ! Ex. 2
-
+Thread.Sleep(2000);
 BankAccount account2 = new BankAccount();
 account2.AccountNumber = 654321;
 account2.Owner = "Jane Doe";
 account2.Balance = 2000.00;
 Console.WriteLine($"Owner: {account2.Owner}");
 Console.WriteLine($"Balance: {account2.Balance}");
+Thread.Sleep(2000);
+Console.Clear();
 
 // ! Ex. 3
     // public void ShowAccount(){
@@ -29,8 +33,10 @@ Console.WriteLine($"Balance: {account2.Balance}");
     //}
 
 // ! Ex. 4
-
+Thread.Sleep(2000);
 Car car = new Car();
 car.Accelerate();
 car.Brake();
 car.Honk();
+Thread.Sleep(2000);
+Console.Clear();
