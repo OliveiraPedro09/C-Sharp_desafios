@@ -1,136 +1,25 @@
-﻿// * Desafio 2 
+﻿// * Desafio 1 
+// Chegou a hora de você seguir todos os passos realizados durante esta aula e criar um jogo com os conhecimentos adquiridos. Neste jogo, o programa gera um número aleatório entre 1 e 100 e o usuário deve adivinhar qual é esse número. O programa utiliza o if-else e switch case para verificar se o número digitado pelo usuário é maior ou menor do que o número gerado pelo programa.O programa também utiliza o conceito de laço de repetição do-while para permitir que o usuário faça várias tentativas até acertar o número. Quando o usuário acertar o número, o jogo acaba e o programa exibe uma mensagem indicando que o jogo acabou.
 
-// A prática é um elemento essencial ao iniciar os estudos em programação, pois é por meio da aplicação prática dos conceitos teóricos que se solidificam os conhecimentos. Ao escrever código, resolver problemas e construir projetos reais, os iniciantes não apenas internalizam a sintaxe das linguagens de programação, mas também desenvolvem a habilidade de pensar logicamente e abordar desafios de maneira eficiente.
+using System;
 
-// Pensando nisso, criamos uma lista de atividades (não obrigatórias) focada em prática para melhorar ainda mais sua experiência de aprendizagem. Bora praticar, então?
+Random random = new Random();
+int luckyNumber = random.Next(1, 101);
 
-// Desafio - Escrever uma função que a partir de dois números de ponto flutuante a e b exiba no console o resultado de suas quatro operações básicas (adição, subtração, divisão e multiplicação), utilizando interpolação de strings.
+do{
+    // * Print para saber se o programa está sendo Executado corretamente
+    Console.WriteLine("Número sorteado: " + luckyNumber);
 
-void Menu(){
-    Console.WriteLine(@"
-╭━━━╮╱╱╭╮╱╱╱╱╱╱╭╮╱╱╱╱╱╭╮
-┃╭━╮┃╱╱┃┃╱╱╱╱╱╱┃┃╱╱╱╱╱┃┃
-┃┃╱╰╋━━┫┃╭━━┳╮╭┫┃╭━━┳━╯┣━━┳━┳━━╮
-┃┃╱╭┫╭╮┃┃┃╭━┫┃┃┃┃┃╭╮┃╭╮┃╭╮┃╭┫╭╮┃
-┃╰━╯┃╭╮┃╰┫╰━┫╰╯┃╰┫╭╮┃╰╯┃╰╯┃┃┃╭╮┃
-╰━━━┻╯╰┻━┻━━┻━━┻━┻╯╰┻━━┻━━┻╯╰╯╰╯");
-    Console.WriteLine("\nQual Operação deseja realizar?");
-    Console.WriteLine("\n1 - Adição");
-    Console.WriteLine("2 - Subtração");
-    Console.WriteLine("3 - Multiplicação");
-    Console.WriteLine("4 - Divisão");
-    Console.WriteLine("5 - Sair");
+    Console.Write("\nAdivinhe o número sorteado entre 1 e 100: ");
+    string userGuess = Console.ReadLine()!;
+    int userNumber = int.Parse(userGuess);
 
-    Console.Write("\nDigite a opção desejada: ");
-    string option = Console.ReadLine()!;
-
-    int intOption = int.Parse(option);
-
-    switch(intOption){
-        case 1:
-            Adicao();
-            break;
-        case 2:
-            Subtracao();
-            break;
-        case 3:
-            Multiplicacao();
-            break;
-        case 4:
-            Divisao();
-            break;
-        case 5:
-            Console.Write("Saindo...");
-            Console.Clear();
-            break;
-        default:
-            Console.WriteLine("Opção inválida!");
-            Console.Clear();
-            return;
-    }
-};
-
-
-void Adicao(){
-    Console.Clear();
-    Console.WriteLine(@"
-╭━━━╮╱╭╮
-┃╭━╮┃╱┃┃
-┃┃╱┃┣━╯┣┳━━┳━━┳━━╮
-┃╰━╯┃╭╮┣┫╭━┫╭╮┃╭╮┃
-┃╭━╮┃╰╯┃┃╰━┫╭╮┃╰╯┃
-╰╯╱╰┻━━┻┻━━┻╯╰┻━━╯");
-    Console.Write("Digite o primeiro número: ");
-    double a = double.Parse(Console.ReadLine()!);
-    Console.Write("Digite o segundo número: ");
-    double b = double.Parse(Console.ReadLine()!);
-
-    double result = a + b;
-    Console.WriteLine($"O resultado da adição é: {result}");
-    Thread.Sleep(2000);
-    Menu();
-}
-
-void Subtracao(){
-    Console.Clear();
-    Console.WriteLine(@"
-╭━━━╮╱╱╭╮╱╭╮
-┃╭━╮┃╱╱┃┃╭╯╰╮
-┃╰━━┳╮╭┫╰┻╮╭╋━┳━━┳━━┳━━┳━━╮
-╰━━╮┃┃┃┃╭╮┃┃┃╭┫╭╮┃╭━┫╭╮┃╭╮┃
-┃╰━╯┃╰╯┃╰╯┃╰┫┃┃╭╮┃╰━┫╭╮┃╰╯┃
-╰━━━┻━━┻━━┻━┻╯╰╯╰┻━━┻╯╰┻━━╯");
-    Console.Write("Digite o primeiro número: ");
-    double a = double.Parse(Console.ReadLine()!);
-    Console.Write("Digite o segundo número: ");
-    double b = double.Parse(Console.ReadLine()!);
-
-    double result = a - b;
-    Console.WriteLine($"O resultado da subtração é: {result}");
-    Thread.Sleep(2000);
-    Menu();
-}
-
-void Multiplicacao(){
-    Console.Clear();
-    Console.WriteLine(@"
-╭━╮╭━╮╱╱╭╮╭╮╱╱╱╱╭╮
-┃┃╰╯┃┃╱╱┃┣╯╰╮╱╱╱┃┃
-┃╭╮╭╮┣╮╭┫┣╮╭╋┳━━┫┃╭┳━━┳━━┳━━┳━━┳━━╮
-┃┃┃┃┃┃┃┃┃┃┃┃┣┫╭╮┃┃┣┫╭━┫╭╮┃╭━┫╭╮┃╭╮┃
-┃┃┃┃┃┃╰╯┃╰┫╰┫┃╰╯┃╰┫┃╰━┫╭╮┃╰━┫╭╮┃╰╯┃
-╰╯╰╯╰┻━━┻━┻━┻┫╭━┻━┻┻━━┻╯╰┻━━┻╯╰┻━━╯
-╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
-╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯");
-    Console.Write("Digite o primeiro número: ");
-    double a = double.Parse(Console.ReadLine()!);
-    Console.Write("Digite o segundo número: ");
-    double b = double.Parse(Console.ReadLine()!);
-
-    double result = a * b;
-    Console.WriteLine($"O resultado da multiplicação é: {result}");
-    Thread.Sleep(2000);
-    Menu();
-}
-
-void Divisao(){
-    Console.Clear();
-    Console.WriteLine(@"
-╭━━━╮
-╰╮╭╮┃
-╱┃┃┃┣┳╮╭┳┳━━┳━━┳━━╮
-╱┃┃┃┣┫╰╯┣┫━━┫╭╮┃╭╮┃
-╭╯╰╯┃┣╮╭┫┣━━┃╭╮┃╰╯┃
-╰━━━┻╯╰╯╰┻━━┻╯╰┻━━╯");
-    Console.Write("Digite o primeiro número: ");
-    double a = double.Parse(Console.ReadLine()!);
-    Console.Write("Digite o segundo número: ");
-    double b = double.Parse(Console.ReadLine()!);
-
-    double result = a / b;
-    Console.WriteLine($"O resultado da divisão é: {result}");
-    Thread.Sleep(2000);
-    Menu();
-}
-
-Menu();
+    if (userNumber == luckyNumber){
+        Console.WriteLine("Parabéns !! Você acertou o número sorteado.");
+        break;
+    } else if (userNumber > luckyNumber){
+        Console.WriteLine("O numero sorteado é menor que o número digitado.");
+    } else {
+        Console.WriteLine("O número sorteado é maior que o número digitado.");
+    };
+}while(true);
